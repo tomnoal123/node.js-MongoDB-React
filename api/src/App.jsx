@@ -1,96 +1,30 @@
-import {useState,useEffect} from "react";
-import ProductForm from "./compotents/ProductForm";
-import ProductList from "./compotents/ProductList";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-
+import Produkty from './pages/Produkty';
+import About from './pages/About';
+import Home from './pages/Home';
+import Navbar from './compotents/Navbar';
+import ProductDetails from './pages/ProductDetails'
 function App(){
-
-    const [name,setName] = useState("");
-    const [price,setPrice] = useState("");
-    const [products,setProducts] = useState([]);
-
-
-    useEffect(()=>{
-        getProducts();
-    },[])
-
-
-
-    async function getProducts(){
-
-        const res = await fetch("http://localhost:5000/products");
-
-        const data = await res.json();
-
-        setProducts(data);
-
-    }
-
-
-
-    async function addProduct(){
-
-        await fetch("http://localhost:5000/products", {
-        method:"POST",
-        headers:{
-        "Content-Type":"application/json"
-    },
-        body:JSON.stringify({
-         name,
-         price
-        })
-        }
-        )
-
-        setName("");
-        setPrice("");
-
-        getProducts();
-
-    }
-
-
-
-    async function deleteProduct(id){
-
-    await fetch(`http://localhost:5000/products/${id}`,{
-        method:"DELETE"
-    }
-    )
-
-    getProducts();
-
-    }
-
-
-
     return(
+        
+        <BrowserRouter>
 
-    <div>
-
-    <h1>Produkty</h1>
-
-
-        <ProductForm
-        name={name}
-        setName={setName}
-        price={price}
-        setPrice={setPrice}
-        addProduct={addProduct}
-        />
+        <Navbar />
 
 
-        <ProductList
-        products={products}
-        deleteProduct={deleteProduct}
-        />
+        <Routes>
+            <Route path='/' element={<Home />} />
 
+            <Route path='/produkty' element={<Produkty />} />
 
-    </div>
+            <Route path='/about' element={<About />} />
 
+            <Route path='/products/:id' element={<ProductDetails />} />
+
+        </Routes>
+
+        </BrowserRouter>
     )
-
-    }
-
-
-    export default App;
+}
+export default App;

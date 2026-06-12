@@ -1,7 +1,8 @@
-import ProductItem from "./ProductItem";
+import ProductItem from './ProductItem.jsx';
 function ProductList({
     products,
-    deleteProduct
+    deleteProduct,
+    updateProduct
 }){
 
     return(
@@ -13,6 +14,7 @@ function ProductList({
                     key={product._id}
                     product={product}
                     deleteProduct={deleteProduct}
+                    updateProduct={updateProduct}
                 />
 
             ))}

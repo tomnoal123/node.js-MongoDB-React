@@ -14,7 +14,11 @@ mongoose.connect("mongodb://appUser:haslo@192.168.1.17:27017/twojaBaza?authSourc
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB error:", err));
 
+
 app.use("/products", productRoutes);
+
+
+
 
 app.listen(5000, () => {
   console.log("Server running on 5000");
