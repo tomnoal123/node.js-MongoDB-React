@@ -20,4 +20,8 @@ router.delete("/:id", async (req, res) => {
   res.json(deleted);
 });
 
+router.post("/:id", async(req, res) =>{
+  const updated = await Product.findByIdAndUpdate(req.params.id);
+  res.json(updated)
+});
 module.exports = router;
