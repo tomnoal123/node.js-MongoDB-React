@@ -33,7 +33,10 @@ Aplikacja składa się z:
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ---
+##📈 Status projektu
 
+Projekt jest w fazie rozwoju i będzie dalej rozbudowywany o nowe funkcjonalności.
+---
 ## 🌱 O projekcie
 
 Jest to mój pierwszy projekt full-stack, stworzony w celu nauki i praktycznego zrozumienia nowoczesnego stosu technologicznego opartego o JavaScript.
@@ -73,3 +76,31 @@ Projekt został wykonany w ramach nauki:
 ```bash
 git clone https://github.com/tomnoal123/node.js-MongoDB-React.git
 cd node.js-MongoDB-React
+##⚙️ Backend (API)
+cd api
+npm install
+-------------------------------------
+**Utwórz plik .env:**
+
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/mydatabase
+
+**Uruchom backend:**
+
+npm run dev
+
+**Backend:**
+
+http://localhost:5000
+---------------------------------------
+##🎨 Frontend (React)
+
+**W nowym terminalu:**
+
+cd ..
+npm install
+npm run dev
+
+**Frontend:**
+
+http://localhost:5173
