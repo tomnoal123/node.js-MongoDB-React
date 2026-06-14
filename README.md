@@ -35,7 +35,7 @@ Aplikacja składa się z:
 ---
 
 
-## 📈 <strong>Status projektu</strong>
+### 📈 <strong>Status projektu</strong>
 
 Projekt jest w fazie rozwoju i będzie dalej rozbudowywany o nowe funkcjonalności.
 ---
