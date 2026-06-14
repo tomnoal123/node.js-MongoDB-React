@@ -5,6 +5,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Navbar from './compotents/Navbar';
 import ProductDetails from './pages/ProductDetails'
+import Login from './pages/Login';
 function App(){
     return(
         
@@ -21,6 +22,8 @@ function App(){
             <Route path='/about' element={<About />} />
 
             <Route path='/products/:id' element={<ProductDetails />} />
+
+            <Route path='/login' element={<Login />} />
 
         </Routes>
 
