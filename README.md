@@ -33,10 +33,15 @@ Aplikacja składa się z:
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ---
+
+
 ## 📈 <strong>Status projektu</strong>
 
 Projekt jest w fazie rozwoju i będzie dalej rozbudowywany o nowe funkcjonalności.
 ---
+
+
+
 ## 🌱 O projekcie
 
 Jest to mój pierwszy projekt full-stack, stworzony w celu nauki i praktycznego zrozumienia nowoczesnego stosu technologicznego opartego o JavaScript.
